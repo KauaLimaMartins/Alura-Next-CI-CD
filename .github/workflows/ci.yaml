@@ -25,5 +25,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Run install node_module
+        run: yarn install
+
       - name: Run preview
         run: yarn deploy:preview 
