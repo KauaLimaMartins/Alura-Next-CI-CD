@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "start": "next start",
@@ -10,7 +11,7 @@
     "lint": "next lint",
     "deploy:staging": "yarn build && npx vercel ./out --confirm --no-clipboard --token=$VERCEL_TOKEN",
     "deploy:prod": "yarn deploy:staging --prod",
-    "deploy:preview": "ts-node ./scripts/pullRequestPreview.ts"
+    "deploy:preview": "ts-node-esm ./scripts/pullRequestPreview.ts"
   },
   "dependencies": {
     "next": "^13.0.4",
