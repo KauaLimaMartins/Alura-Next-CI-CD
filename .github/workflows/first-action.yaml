@@ -6,9 +6,9 @@ name: "CI (Continuous Integration): First action"
 on:
   # Ativa esse fluxo de trabalho para cada push ou pull que acontecer apontando para a branch origin
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 # Definindo o que queremos executar
 job:
