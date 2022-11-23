@@ -8,7 +8,7 @@
     "start": "next start",
     "build": "rm -rf out && next build && next export",
     "lint": "next lint",
-    "deploy": "yarn build && npx vercel ./out --confim --no-clipboard",
+    "deploy": "yarn build && npx vercel ./out --confirm --no-clipboard",
     "deploy:prod": "yarn deploy --prod --token=$VERCEL_TOKEN"
   },
   "dependencies": {
