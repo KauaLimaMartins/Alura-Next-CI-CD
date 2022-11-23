@@ -8,8 +8,8 @@
     "start": "next start",
     "build": "rm -rf out && next build && next export",
     "lint": "next lint",
-    "deploy": "yarn build && npx vercel ./out --confirm --no-clipboard",
-    "deploy:prod": "yarn deploy --prod --token=$VERCEL_TOKEN",
+    "deploy:staging": "yarn build && npx vercel ./out --confirm --no-clipboard --token=$VERCEL_TOKEN",
+    "deploy:prod": "yarn deploy:staging --prod",
     "deploy:preview": "ts-node ./scripts/pullRequestPreview.ts"
   },
   "dependencies": {
@@ -26,6 +26,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.8.0",
+    "tslib": "^2.4.1",
     "typescript": "^4.9.3"
   }
 }

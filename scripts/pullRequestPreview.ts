@@ -1,7 +1,7 @@
-console.log("fununcia maluco");
-console.log("fununcia maluco 2");
-console.log("fununcia maluco 3");
-console.log("fununcia maluco 4");
-console.log("fununcia maluco 5");
-console.log("fununcia maluco 6");
-console.log("fununcia maluco 7");
+const { execSync } = require("child_process");
+
+const command = "yarn deploy:staging";
+
+const output = execSync(command, { encoding: "utf-8" });
+
+console.log(output);
