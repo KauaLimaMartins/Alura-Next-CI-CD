@@ -1,0 +1,20 @@
+name: "CI: Main Workflow"
+
+on:
+  pull_request:
+    types: [opened, synchronized]
+
+jobs:
+  linter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      # Runs command to install node_modules
+      - name: Run install node_modules
+        run: yarn install
+
+      # Runs linter command to fix lint issues
+      - name: Run linter
+        run: yarn lint --fix
