@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "next dev",
     "start": "next start",
-    "build": "next build",
-    "lint": "next lint"
+    "build": "next build && next export",
+    "lint": "next lint",
+    "deploy": "yarn build && npx vercel ./out --confim --no-clipboard",
+    "deploy:pro": "yarn deploy --prod --token=$VERCEL_TOKEN"
   },
   "dependencies": {
     "next": "^13.0.4",
