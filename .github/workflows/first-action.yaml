@@ -11,7 +11,7 @@ on:
     branches: [ "master" ]
 
 # Definindo o que queremos executar
-job:
+jobs:
   # Job: Example
   example:
     runs-on: ubuntu-latest
