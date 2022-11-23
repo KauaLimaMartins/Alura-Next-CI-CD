@@ -15,6 +15,6 @@ jobs:
       - name: Run install node_modules
         run: yarn install
 
-      # Runs linter command to fix lint issues
+      # Runs linter command to show if has lint issues
       - name: Run linter
-        run: yarn lint --fix
+        run: yarn lint
