@@ -1,0 +1,22 @@
+# Esse é um workflow básico para ajudar a iniciar com github actions
+
+name: "CI (Continuous Integration): First action"
+
+# Controla quando o fluxo de trabalho vai rodar
+on:
+  # Ativa esse fluxo de trabalho para cada push ou pull que acontecer apontando para a branch origin
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+# Definindo o que queremos executar
+job:
+  # Job: Example
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run a one-line script 
+        run: echo "Hello, world!"
