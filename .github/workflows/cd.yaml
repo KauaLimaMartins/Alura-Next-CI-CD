@@ -22,4 +22,4 @@ jobs:
 
       # Runs deploy command to put it in production mode
       - name: Run deploy
-        run: yarn deploy
+        run: yarn deploy:prod
