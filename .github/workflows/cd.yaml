@@ -1,0 +1,25 @@
+name: "CD: Main Workflow"
+
+env:
+  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      # Runs command to install node_modules
+      - name: Run install node_modules
+        run: yarn install
+
+      # Runs deploy command to put it in production mode
+      - name: Run deploy
+        run: yarn deploy
