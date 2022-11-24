@@ -53,8 +53,3 @@ jobs:
         with: 
           browser: chrome
 
-      - name: Run install
-        run: yarn install
-
-      - name: Run cypress
-        run: yarn test:e2e
